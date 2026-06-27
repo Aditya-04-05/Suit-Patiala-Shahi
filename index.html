@@ -14,64 +14,50 @@
     }
 
     body {
-      background: #000;
-      color: #f2d1b2;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      color: #f2d1b2;
       overflow: hidden;
-      position: relative;
-    }
 
-    /* Background Watermark */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: url("logo.png") center center no-repeat;
-      background-size: 450px;
-      opacity: 0.06;
-      pointer-events: none;
+      background:
+        linear-gradient(rgba(0,0,0,0.90), rgba(0,0,0,0.90)),
+        url("logo.jpg") center center / 650px no-repeat,
+        #000;
     }
 
     .container {
-      position: relative;
-      z-index: 1;
-      max-width: 650px;
-      padding: 45px;
-      border: 1px solid rgba(232, 185, 149, 0.25);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 0 35px rgba(232, 185, 149, 0.12);
+      width: 100%;
+      max-width: 900px;
+      padding: 40px;
     }
 
     .logo {
-      width: 140px;
-      margin-bottom: 25px;
+      width: 170px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       color: #e8b995;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #d4a373;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
       font-weight: 400;
     }
 
     p {
-      font-size: 1.1rem;
-      color: #f2d1b2;
+      font-size: 1.3rem;
       line-height: 1.8;
-      margin-bottom: 35px;
+      margin-bottom: 45px;
+      color: #f2d1b2;
     }
 
     .btn {
@@ -79,46 +65,54 @@
       background: #25D366;
       color: #fff;
       text-decoration: none;
-      padding: 15px 35px;
+      padding: 18px 40px;
       border-radius: 50px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(37,211,102,.25);
+      transition: 0.3s;
+      box-shadow: 0 8px 30px rgba(37,211,102,.35);
     }
 
     .btn:hover {
       background: #1EBE5D;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(37,211,102,.4);
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(37,211,102,.5);
     }
 
     footer {
-      margin-top: 35px;
+      margin-top: 50px;
       color: #b98d68;
-      font-size: 14px;
+      font-size: 15px;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        width: 90%;
-        padding: 30px;
-      }
+    @media (max-width: 768px) {
 
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
+      body {
+        background:
+          linear-gradient(rgba(0,0,0,.92), rgba(0,0,0,.92)),
+          url("logo.jpg") center center / 300px no-repeat,
+          #000;
       }
 
       .logo {
-        width: 110px;
+        width: 120px;
       }
 
-      body::before {
-        background-size: 280px;
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-size: 18px;
       }
     }
   </style>
@@ -128,15 +122,14 @@
 
   <div class="container">
 
-    <img src="logo.jpg" alt="Suit Patiala Shahi Logo" class="logo">
+    <img src="logo.jpg" class="logo" alt="Suit Patiala Shahi">
 
     <h1>Suit Patiala Shahi</h1>
 
     <h2>✨ Coming Soon ✨</h2>
 
     <p>
-      We're crafting something beautiful for you.
-      <br><br>
+      We're crafting something beautiful for you.<br><br>
       Until then, connect with us on WhatsApp.
     </p>
 
