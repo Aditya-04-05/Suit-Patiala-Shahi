@@ -1,91 +1,154 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suit Patiala Shahi</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suit Patiala Shahi</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    }
 
-      body {
-        background: linear-gradient(135deg, #6d214f, #b33771);
-        color: white;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+    body {
+      background: #000;
+      color: #f2d1b2;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
 
+    /* Background Watermark */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("logo.png") center center no-repeat;
+      background-size: 450px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      padding: 45px;
+      border: 1px solid rgba(232, 185, 149, 0.25);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 35px rgba(232, 185, 149, 0.12);
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #e8b995;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #d4a373;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #f2d1b2;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(37,211,102,.25);
+    }
+
+    .btn:hover {
+      background: #1EBE5D;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37,211,102,.4);
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #b98d68;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
       .container {
-        padding: 40px;
-        max-width: 600px;
+        width: 90%;
+        padding: 30px;
       }
 
       h1 {
-        font-size: 3rem;
-        margin-bottom: 15px;
-        letter-spacing: 2px;
+        font-size: 2.2rem;
       }
 
       h2 {
-        font-size: 2rem;
-        margin-bottom: 25px;
-        color: #ffeaa7;
+        font-size: 1.5rem;
       }
 
-      p {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
+      .logo {
+        width: 110px;
       }
 
-      .btn {
-        display: inline-block;
-        background: #25d366;
-        color: white;
-        padding: 15px 35px;
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: bold;
-        transition: 0.3s;
+      body::before {
+        background-size: 280px;
       }
+    }
+  </style>
+</head>
 
-      .btn:hover {
-        background: #1da851;
-        transform: scale(1.05);
-      }
+<body>
 
-      footer {
-        margin-top: 35px;
-        font-size: 14px;
-        color: #f1f1f1;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Suit Patiala Shahi</h1>
-      <h2>✨ Coming Soon ✨</h2>
+  <div class="container">
 
-      <p>
-        We're working on something beautiful for you.
-        <br /><br />
-        Till then, connect with us on WhatsApp.
-      </p>
+    <img src="logo.png" alt="Suit Patiala Shahi Logo" class="logo">
 
-      <!-- Replace the number below with your WhatsApp number -->
-      <a href="https://wa.me/91XXXXXXXXXX" class="btn" target="_blank">
-        💬 Connect on WhatsApp
-      </a>
+    <h1>Suit Patiala Shahi</h1>
 
-      <footer>© 2026 Suit Patiala Shahi</footer>
-    </div>
-  </body>
+    <h2>✨ Coming Soon ✨</h2>
+
+    <p>
+      We're crafting something beautiful for you.
+      <br><br>
+      Until then, connect with us on WhatsApp.
+    </p>
+
+    <a href="https://wa.me/919056712386" class="btn" target="_blank">
+      💬 Connect on WhatsApp
+    </a>
+
+    <footer>
+      © 2026 Suit Patiala Shahi. All Rights Reserved.
+    </footer>
+
+  </div>
+
+</body>
 </html>
